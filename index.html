@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muis Maulana Hidayat, S.Pd. — Portfolio Personal</title>
+  <meta name="description" content="Portfolio premium Muiz Maulana Hidayat, S.Pd. — Corporate elegant + creative personal brand" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = {theme: {extend: {colors: {brand: '#071033', accent: '#0ea5a4'}}}};</script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    :root{--accent:#0ea5a4;--deep:#071033}
+    html{scroll-behavior:smooth}
+    body{background:linear-gradient(180deg,#051028 0%, #071033 60%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+    .glass{backdrop-filter: blur(8px);background:rgba(255,255,255,0.03)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04)}
+    .reveal{opacity:0;transform:translateY(18px);transition:all .7s cubic-bezier(.2,.9,.3,1)}
+    .reveal.show{opacity:1;transform:none}
+    .grad-name{background:linear-gradient(90deg, #ffffff, #cbe1ff, #7fb0ff);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 6px 30px rgba(123,164,255,0.06)}
+    .skill-chip{position:relative;transition:transform .25s, box-shadow .25s;cursor:default}
+    .skill-chip:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(14,165,132,0.08)}
+    .tooltip{position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.88);border:1px solid rgba(56,189,248,0.18);color:#fff;padding:8px 10px;border-radius:8px;font-size:0.85rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .22s ease, transform .22s ease;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .skill-chip:hover .tooltip{opacity:1;transform:translateX(-50%) translateY(-6px)}
+    .touch-show{opacity:1 !important;transform:translateX(-50%) translateY(-6px) !important}
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;background:linear-gradient(180deg,#10b981,#059669);color:#fff;padding:12px;border-radius:999px;box-shadow:0 10px 30px rgba(2,132,199,0.18);z-index:60}
+    nav a.active{color:var(--accent);font-weight:600}
+    section{position:relative;z-index:1;scroll-margin-top:96px}
+    #hero .hero-back{position:absolute;inset:0;z-index:0;pointer-events:none}
+    #hero .hero-content{position:relative;z-index:2}
+    @media (max-width:768px){.skill-chip{cursor:pointer}.skill-chip .tooltip{bottom:140%;left:50%;transform:translateX(-50%);}}
+    .cards-section {
+  margin-top: 50px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.card-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(212,175,55,0.25);
+}
+
+.card-img img {
+  width: 100%;
+  height: 220px;
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: 0.3s ease;
+}
+
+.card-img img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.12);
+}
+
+.card-title {
+  color: var(--gold);
+  font-size: 1.25rem;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.card-desc {
+  margin-top: 8px;
+  color: #ddd;
+  text-align: justify;
+  font-size: 0.95rem;
+}
+
+.cards-section h3 {
+  margin-bottom: 30px; /* jarak antara judul dan kotak */
+}
+
+
+  </style>
+</head>
+<body class="text-gray-200 antialiased">
+  <!-- NAVBAR -->
+  <header class="fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6 backdrop-blur-sm glass rounded-b-md">
+      <a href="#hero" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-900 to-blue-500 flex items-center justify-center text-white font-bold">MH</div>
+        <div class="hidden md:block">
+          <div class="text-sm font-semibold">Muis Maulana Hidayat, S.Pd.</div>
+          <div class="text-xs text-gray-400">Corporate • Operasional • Akademik</div>
+        </div>
+      </a>
+      <nav id="mainNav" class="hidden md:flex gap-6 items-center text-sm">
+        <a href="#hero">Home</a>
+        <a href="#visi">Visi & Nilai</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact" class="px-3 py-2 rounded-md bg-[var(--accent)] text-black font-semibold">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobileToggle" class="p-2 glass rounded-md"><i class='bx bx-menu text-2xl'></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="min-h-screen flex items-center justify-center relative pt-24 px-4">
+    <div class="hero-back">
+      <img src="profile.jpg" alt="Foto Muiz Maulana Hidayat" class="w-full h-full object-cover brightness-60" style="width:100%;height:100%;object-fit:cover;" />
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,16,51,0.35), rgba(7,16,51,0.75));mix-blend-mode:multiply"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(600px 300px at 15% 25%, rgba(14,165,132,0.07), transparent 10%), radial-gradient(500px 250px at 85% 75%, rgba(56,189,248,0.05), transparent 12%);pointer-events:none"></div>
+    </div>
+
+    <div class="hero-content relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-center lg:text-left space-y-6">
+        <div class="inline-flex items-center gap-3">
+          <div class="px-3 py-1 rounded-full bg-white/10 text-xs text-white">Available for hire</div>
+          <div class="text-sm text-gray-300">Based in Bandung, Indonesia</div>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold grad-name">Muis Maulana Hidayat, S.Pd.</h1>
+        <p class="max-w-xl text-gray-200 text-lg leading-relaxed">Profesional korporat yang menggabungkan ketajaman administratif, kepemimpinan operasional, dan pengalaman praktis di berbagai sektor kerja. Terbiasa menangani berbagai kegiatan operasional, menyederhanakan proses, meningkatkan efisiensi, dan membangun tim yang dapat diandalkan.</p>
+
+        <div class="flex gap-4 mt-4">
+          <a href="#contact" class="px-6 py-3 rounded-md bg-[var(--accent)] text-black font-semibold shadow-lg">Hire / Konsultasi</a>
+          <button id="downloadCV" class="px-6 py-3 rounded-md border border-white/10 glass">Download CV</button>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-gray-300">
+          <div>
+            <div class="text-2xl font-bold">4+</div>
+            <div class="text-xs text-gray-400">Tahun pengalaman</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold">6</div>
+            <div class="text-xs text-gray-400">Industri</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold">1</div>
+            <div class="text-xs text-gray-400">Usaha</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold">S.Pd.</div>
+            <div class="text-xs text-gray-400">Gelar Akademik</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <div style="width:380px;height:520px;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.04);transform:translateY(0);transition:transform .6s ease;">
+          <img src="profile.jpg" alt="Foto Muiz Maulana Hidayat" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0;transform:scale(1.02);transition:opacity .9s ease, transform .9s ease;" id="heroPhoto" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISI & NILAI -->
+  <section id="visi" class="max-w-6xl mx-auto px-6 py-12 mt-8 reveal">
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <div class="card p-8 rounded-xl">
+        <h3 class="text-2xl font-semibold">Visi Profesional</h3>
+        <p style="text-align: justify;" class="mt-3 text-gray-300">Menjadi profesional yang mampu membawa perubahan operasional nyata pada Perusahaan melalui penerapan sistem yang sederhana, terukur, dan berkelanjutan serta membentuk budaya kerja yang bermartabat.</p>
+      </div>
+      <div class="card p-8 rounded-xl">
+        <h3 class="text-2xl font-semibold">Nilai Inti</h3>
+        <ul class="mt-3 text-gray-300 list-disc ml-5">
+          <li>Integritas — bertanggung jawab pada setiap tindakan kerja.</li>
+          <li>Disiplin — ketepatan dan konsistensi dalam pelaksanaan tugas.</li>
+          <li>Kolaborasi — membangun tim yang saling mendukung dan bertumbuh.</li>
+          <li>Efisiensi — menyederhanakan proses tanpa mengorbankan kualitas.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-12 reveal">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2 card p-8 rounded-xl">
+        <h3 class="text-2xl font-semibold">Tentang Saya</h3>
+        <p class="mt-4 text-gray-200 leading-relaxed">Saya memiliki pengalaman lintas industri dari operasi pabrik, logistik, pelayanan fasilitas, hingga manajemen Administrasi dan pendidikan. Pendekatan kerja saya pragmatis: identifikasi hambatan, susun prosedur yang jelas, dan latih tim agar sistem berjalan mandiri. Saya percaya hasil terbaik muncul ketika proses disusun sederhana, terukur, dan manusiawi.</p>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-semibold">Pendidikan</h4>
+            <p class="text-sm text-gray-300 mt-2">S1 Pendidikan Agama Islam — Universitas Islam Bandung (2021–2025) • IPK 3.48</p>
+          </div>
+          <div>
+            <h4 class="font-semibold">Lokasi</h4>
+            <p class="text-sm text-gray-300 mt-2">Bandung, Indonesia</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card p-6 rounded-xl">
+        <h4 class="font-semibold">Quick Facts</h4>
+        <ul class="text-sm text-gray-300 mt-3 space-y-2">
+          <li><strong>Nama:</strong> Muis Maulana Hidayat, S.Pd.</li>
+          <li><strong>Email:</strong> khalifahdyaksa@gmail.com</li>
+          <li><strong>WA:</strong> +62 859-1096-99277</li>
+          <li><strong>Available:</strong> Konsultasi & hire</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SKILLS (with tooltips and mobile touch support) -->
+  <section id="skills" class="max-w-6xl mx-auto px-6 py-12 reveal">
+    <h3 class="text-2xl font-semibold">Skills — Technical & Professional</h3>
+    <p class="text-gray-400 mt-2">Keterampilan yang mencakup kemampuan administratif, teknis dasar, dan aplikasi produktivitas.</p>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="card p-6 rounded-xl">
+        <h4 class="font-semibold">Professional & Soft Skills</h4>
+        <div class="mt-4 grid grid-cols-2 gap-3">
+          <div class="skill-chip p-3 rounded-lg">Public Speaking & Presentations<span class="tooltip">Kemampuan berbicara dan menyampaikan ide di depan umum.</span></div>
+          <div class="skill-chip p-3 rounded-lg">Penjadwalan & Korespondensi<span class="tooltip">Mengatur jadwal dan surat-menyurat profesional.</span></div>
+          <div class="skill-chip p-3 rounded-lg">Pengarsipan & Dokumentasi<span class="tooltip">Mengelola dokumen kerja dengan rapi dan efisien.</span></div>
+          <div class="skill-chip p-3 rounded-lg">Input Data & Rekap Harian<span class="tooltip">Merekam dan memantau data pekerjaan rutin.</span></div>
+          <div class="skill-chip p-3 rounded-lg">Kerja Sama Tim<span class="tooltip">Kolaborasi efektif dan komunikasi dalam tim.</span></div>
+          <div class="skill-chip p-3 rounded-lg">Disiplin & Integritas Kerja<span class="tooltip">Menjaga etika kerja dan tanggung jawab tinggi.</span></div>
+          <div class="skill-chip p-3 rounded-lg">Time Management<span class="tooltip">Mengatur waktu agar pekerjaan selesai tepat jadwal.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Problem Solving<span class="tooltip">Mencari solusi cepat saat terjadi hambatan operasional.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Customer Handling<span class="tooltip">Mengelola interaksi pelanggan secara profesional & ramah.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Leadership<span class="tooltip">Mengambil keputusan, memberi arahan, dan menjaga ritme kerja tim.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Operational Monitoring<span class="tooltip">Memantau alur kerja harian agar berjalan efisien.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Communication Skills<span class="tooltip">Komunikasi efektif dengan tim dan atasan.</span></div>
+<div class="skill-chip p-3 rounded-lg">Adaptability<span class="tooltip">Kemampuan menyesuaikan diri dengan perubahan lingkungan kerja.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Conflict Resolution<span class="tooltip">Menyelesaikan masalah atau perselisihan secara profesional.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Critical Thinking<span class="tooltip">Menganalisis situasi untuk mengambil keputusan tepat.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Empathy & Team Support<span class="tooltip">Memahami kebutuhan rekan kerja dan mendukung mereka secara efektif.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Creativity & Innovation<span class="tooltip">Menghasilkan ide baru untuk perbaikan proses atau solusi unik.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Stress Management<span class="tooltip">Tetap tenang dan produktif saat menghadapi tekanan kerja.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Decision Making<span class="tooltip">Mengambil keputusan tepat dengan informasi yang tersedia.</span></div>
+
+<div class="skill-chip p-3 rounded-lg">Motivation & Initiative<span class="tooltip">Proaktif memulai tugas dan mendorong diri serta tim untuk maju.</span></div>
+
+        </div>
+      </div>
+
+      <div class="card p-6 rounded-xl">
+        <h4 class="font-semibold">Technical & Digital Skills</h4>
+        <p class="text-sm text-gray-400 mt-2">(Ketuk atau hover skill untuk melihat deskripsi singkat dan level)</p>
+        <div class="mt-4 space-y-3" id="techSkills"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-12 reveal">
+    <h3 class="text-2xl font-semibold">Experience — Selected Roles & Achievements</h3>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="card p-6 rounded-xl">
+        <h4 class="font-semibold">Head Barista — Paman Wreda Coffee</h4>
+        <p class="text-sm text-gray-400">2025</p>
+        <ul class="list-disc ml-5 mt-3 text-gray-300">
+          <li>Mengelola operasional harian dan tim barista, menjaga kualitas produk, serta meningkatkan efisiensi stok 20%.</li>
+          <li>Menyusun laporan keuangan harian dan SOP layanan pelanggan.</li>
+        </ul>
+      </div>
+
+      <div class="card p-6 rounded-xl">
+        <h4 class="font-semibold">Barista — D'Sarande Coffee</h4>
+        <p class="text-sm text-gray-400">2024 — 2025</p>
+        <ul class="list-disc ml-5 mt-3 text-gray-300">
+          <li>Mengelola layanan pelanggan dan mengembangkan konsep visual outlet.</li>
+        </ul>
+      </div>
+
+      <div class="card p-6 rounded-xl">
+        <h4 class="font-semibold">Helper Gudang — J&T</h4>
+        <p class="text-sm text-gray-400">2024</p>
+        <ul class="list-disc ml-5 mt-3 text-gray-300">
+          <li>Sortir paket, memantau akurasi pengiriman, serta memastikan proses distribusi tepat waktu.</li>
+        </ul>
+      </div>
+
+      <div class="card p-6 rounded-xl">
+        <h4 class="font-semibold">Shopkeeper — Fotocopy Syafa Grafika</h4>
+        <p class="text-sm text-gray-400">2023</p>
+        <ul class="list-disc ml-5 mt-3 text-gray-300">
+          <li>Melayani pelanggan, mengelola kas kecil, dan mengatur stok kebutuhan toko.</li>
+        </ul>
+      </div>
+
+      <div class="card p-6 rounded-xl">
+        <h4 class="font-semibold">Operator — Pabrik Beras</h4>
+        <p class="text-sm text-gray-400">2014 — 2022</p>
+        <ul class="list-disc ml-5 mt-3 text-gray-300">
+          <li>Mengoperasikan mesin produksi dan menjaga keselamatan kerja di area produksi serta Memastikan kualitas produksi sesuai standar perusahaan.</li>
+          <li>Menyusun Laporan Omset harian, mingguan, bulanan dan Pelaporan Kas Pabrik </li>
+        </ul>
+      </div>
+
+      <div class="card p-6 rounded-xl">
+        <h4 class="font-semibold">Guru PAI (PPL) — SMA PGII 1 Bandung</h4>
+        <p class="text-sm text-gray-400">2024</p>
+        <ul class="list-disc ml-5 mt-3 text-gray-300">
+          <li>Menyusun Administrasi Guru,Prota, Promes, RPP, media pembelajaran serta melakukan Kegiatan Belajar mengajar dan evaluasi hasil belajar.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card p-6 rounded-xl mt-6">
+        <h4 class="font-semibold">Staff Magang IPSRS — RSUD Bayu Asih</h4>
+        <p class="text-sm text-gray-400">2019</p>
+        <ul class="list-disc ml-5 mt-3 text-gray-300">
+          <li>Melakukan pemeliharaan preventif & korektif pada fasilitas rumah sakit.</li>
+          <li>monitoring peralatan harian, membantu perbaikan ringan, memastikan keamanan & kesiapan ruang pelayanan.</li>
+          <li>serta berkoordinasi dengan unit terkait untuk menjaga operasional rumah sakit tetap lancar dan aman.</li>
+          <li>Menyusun Laporan Administrasi IPSRS skala Micro</li>
+        </ul>
+      </div>
+  </section>
+
+<section class="cards-section">
+  <h3 class="text-2xl font-semibold">
+    Portfolio — Selected Projects & Deliverables
+  </h3>
+
+  <div class="cards-grid">
+
+    <!-- Card 1: Branding -->
+    <div class="card-box">
+      <div class="card-img">
+        <img src="Brand.jpg" alt="Branding">
+      </div>
+      <h3 class="card-title">Brand & Customer Handling</h3>
+      <p class="card-desc">
+        Berpengalaman dalam membangun citra brand, menjaga kualitas pelayanan,
+        menciptakan pengalaman pelanggan yang baik, serta membangun komunikasi
+        profesional yang mencerminkan nilai integritas dan keramahan.
+      </p>
+    </div>
+
+    <!-- Card 2: Pembukuan -->
+    <div class="card-box">
+      <div class="card-img">
+        <img src="Pembukuan.jpg" alt="Pembukuan">
+      </div>
+      <h3 class="card-title">Administrasi & Pembukuan</h3>
+      <p class="card-desc">
+        Terampil dalam pencatatan transaksi, pengelolaan data, pembuatan laporan,
+        penggunaan Microsoft Office, dan penyusunan dokumen operasional secara
+        rapi, akurat, serta mudah dipahami.
+      </p>
+    </div>
+
+    <!-- Card 3: Workflow -->
+    <div class="card-box">
+      <div class="card-img">
+        <img src="workflow.jpg" alt="Workflow">
+      </div>
+      <h3 class="card-title">Workflow & Operational Process</h3>
+      <p class="card-desc">
+        Memahami alur kerja operasional, kolaborasi tim, penyusunan SOP sederhana,
+        serta pengembangan sistem kerja yang lebih efisien dan terstruktur.
+      </p>
+    </div>
+
+    <!-- Card 4: Customer Service & Fundraising -->
+<div class="card-box">
+  <div class="card-img">
+    <img src="fundraising.jpeg" alt="Fundraising">
+  </div>
+  <h3 class="card-title">Humas & Fundraising</h3>
+  <p class="card-desc">
+    Berpengalaman dalam mengelola interaksi dengan pelanggan dan donatur,
+    melakukan pendekatan persuasif, menjaga hubungan baik, serta
+    mendukung pencapaian target fundraising di organisasi dan yayasan.
+  </p>
+</div>
+
+<!-- Card 5: Sarpras & Logistik -->
+<div class="card-box">
+  <div class="card-img">
+    <img src="Ipsrs.jpg" alt="Ipsrs">
+  </div>
+  <h3 class="card-title">Sarpras & Logistik</h3>
+  <p class="card-desc">
+    Terlibat dalam pengelolaan sarana-prasarana dan logistik di lingkungan
+    sekolah dan rumah sakit, memastikan ketersediaan fasilitas dan alat kerja
+    terjaga dengan baik serta operasional berjalan lancar.
+  </p>
+</div>
+
+<!-- Card 6: Barista & Cafe Management -->
+<div class="card-box">
+  <div class="card-img">
+    <img src="Barista.jpg" alt="Barista">
+  </div>
+  <h3 class="card-title">Caffee & Barista Experience</h3>
+  <p class="card-desc">
+    Mengelola operasional Caffe skala micro, melayani pelanggan, membuat menu, menyusun HPP
+    serta menjaga standar kebersihan dan kualitas layanan yang konsisten.
+  </p>
+</div>
+
+<!-- Card 7: Fotocopy & Shopkeeping -->
+<div class="card-box">
+  <div class="card-img">
+    <img src="fotocopy.jpg" alt="Fotocopy">
+  </div>
+  <h3 class="card-title">Shopkeeping</h3>
+  <p class="card-desc">
+    Terbiasa menjalankan operasional harian, mengelola transaksi,
+    memastikan stok tersedia, serta memberikan pelayanan ramah dan cepat
+    kepada pelanggan di usaha fotocopy.
+  </p>
+</div>
+
+<!-- Card 8: Dokumentasi & Input Data -->
+<div class="card-box">
+  <div class="card-img">
+    <img src="input_data.jpg" alt="input_data">
+  </div>
+  <h3 class="card-title">Dokumentasi & Input Data</h3>
+  <p class="card-desc">
+    Terampil dalam pengarsipan, pencatatan, dan rekap data harian
+    dengan rapi dan akurat, memudahkan pelacakan informasi dan laporan.
+  </p>
+</div>
+
+
+  </div>
+</section>
+
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="max-w-6xl mx-auto px-6 py-12 reveal">
+    <h3 class="text-2xl font-semibold">Testimonials</h3>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="card p-6 rounded-xl">
+        <p class="italic text-gray-300">"Muiz memiliki kombinasi teknis dan kepemimpinan yang membuat proses menjadi mudah dan efisien. Tim kami merasakan dampak positif setelah menerapkan SOP yang ia rancang."</p>
+        <div class="mt-3 text-sm text-gray-400">— SV Wreda Coffee</div>
+      </div>
+      <div class="card p-6 rounded-xl">
+        <p class="italic text-gray-300">"Template pembukuan yang dibuat Muiz sangat membantu usaha kecil kami untuk memantau arus kas dan memutuskan strategi harga."</p>
+        <div class="mt-3 text-sm text-gray-400">— SV Syafa Grafika</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-6xl mx-auto px-6 py-12 reveal">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card p-6 rounded-xl">
+        <h3 class="text-2xl font-semibold">Let's Connect</h3>
+        <p class="text-gray-300 mt-3">Saya terbuka untuk peluang kerja, konsultasi operasional, atau proyek bersama. Klik tombol WhatsApp untuk chat cepat.</p>
+        <div class="mt-6 space-y-3">
+          <div><strong>Email:</strong> <a href="mailto:muizmaulana@email.com" class="text-[var(--accent)]">khalifahdyaksa@gmail.com</a></div>
+          <div><strong>WA:</strong> <a href="https://wa.me/62859109699277" class="text-[var(--accent)]">+62 859-1096-99277</a></div>
+          <div><strong>Location:</strong> Bandung, Indonesia</div>
+        </div>
+      </div>
+
+     <form id="contactForm" class="card p-6 rounded-xl">
+  <label class="text-sm text-gray-300">Nama</label>
+  <input id="nameInput" type="text" placeholder="Example: Muiz Maulana Hidayat"
+         class="w-full mt-2 p-3 rounded-md bg-transparent border border-white/8 text-white" required />
+
+  <label class="text-sm text-gray-300 mt-3">Email</label>
+  <input id="emailInput" type="email" placeholder="Example: muizmaulanahidayat@gmail.com"
+         class="w-full mt-2 p-3 rounded-md bg-transparent border border-white/8 text-white" required />
+
+  <label class="text-sm text-gray-300 mt-3">Pesan</label>
+  <textarea id="messageInput" rows="5" placeholder="Tulis pesanmu di sini..."
+         class="w-full mt-2 p-3 rounded-md bg-transparent border border-white/8 text-white"></textarea>
+
+  <div class="mt-4 flex gap-3">
+    <button type="submit" class="px-4 py-2 rounded-md bg-[var(--accent)] text-black font-semibold">Kirim Pesan</button>
+    <button type="button" id="resetBtn" class="px-4 py-2 rounded-md glass">Bersihkan</button>
+  </div>
+</form>
+
+<script>
+  // Tombol bersihkan
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    document.getElementById('contactForm').reset();
+  });
+
+  // Contoh: Kirim form via email (pakai emailjs atau backend)
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert("Form berhasil dikirim! (Di sini nanti hubungkan ke email backend)");
+    this.reset();
+  });
+</script>
+
+
+  </section>
+
+  <footer class="text-center text-sm text-gray-400 py-8">© <span id="year"></span> Muis Maulana Hidayat, S.Pd. — All rights reserved</footer>
+
+  <!-- WhatsApp floating button -->
+  <a class="whatsapp-float" href="https://wa.me/62859109699277" target="_blank" aria-label="Chat via WhatsApp">
+    <i class='bx bxl-whatsapp text-2xl'></i>
+    <span class="ml-3 hidden sm:inline">Chat via WhatsApp</span>
+  </a>
+
+  <script>
+    // INIT
+    (function(){
+      try{ document.getElementById('year').textContent = new Date().getFullYear(); }catch(e){}
+
+      // hero photo fade-in
+      var heroPhoto = document.getElementById('heroPhoto');
+      if(heroPhoto){ setTimeout(function(){ heroPhoto.style.opacity = '1'; heroPhoto.style.transform = 'scale(1)'; }, 200);
+      }
+
+      // reveal observer
+      var reveals = document.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var observer = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target); } });
+        }, {threshold:0.12});
+        reveals.forEach(function(r){ observer.observe(r); });
+      }else{ reveals.forEach(function(r){ r.classList.add('show'); }); }
+
+      // tech skills data
+      var techSkills = [
+        {name:'HTML + CSS',level:50,example:'Dasar struktur dan styling sederhana.'},
+        {name:'MySQL',level:40,example:'Dasar query dan pengelolaan data.'},
+        {name:'C / C++',level:40,example:'Pemahaman logika pemrograman dasar.'},
+        {name:'VS Code / Sublime Text',level:45,example:'Editor teks untuk belajar coding dasar.'},
+        {name:'Microsoft Excel',level:60,example:'Pengolahan data dasar dan rekap harian.'},
+        {name:'Microsoft Word',level:90,example:'Dokumentasi dan laporan profesional.'},
+        {name:'PowerPoint',level:85,example:'Pembuatan slide presentasi menarik.'},
+        {name:'Artificial Intelligence (AI)',level:60,example:'Pemanfaatan AI untuk tugas administratif & desain.'},
+        {name:'Video Editing',level:55,example:'Pengeditan video sederhana.'}
+      ];
+
+      var techContainer = document.getElementById('techSkills');
+      if(techContainer){
+        techSkills.forEach(function(s){
+          var el = document.createElement('div');
+          el.className = 'skill-chip p-3 rounded-lg border border-white/6';
+
+          var barWrap = document.createElement('div');
+          barWrap.className = 'flex justify-between items-center';
+          var nameDiv = document.createElement('div'); nameDiv.className = 'font-semibold'; nameDiv.textContent = s.name;
+          var lvlDiv = document.createElement('div'); lvlDiv.className = 'text-sm text-gray-300'; lvlDiv.textContent = s.level + '%';
+          barWrap.appendChild(nameDiv); barWrap.appendChild(lvlDiv);
+
+          var progBg = document.createElement('div'); progBg.className = 'h-2 bg-white/10 rounded-full mt-2';
+          var prog = document.createElement('div'); prog.className = 'h-2 bg-blue-500 rounded-full'; prog.style.width = s.level + '%'; progBg.appendChild(prog);
+
+          var tip = document.createElement('div'); tip.className = 'tooltip'; tip.textContent = s.example;
+
+          el.appendChild(barWrap); el.appendChild(progBg); el.appendChild(tip);
+
+          // hover handled by CSS; add touch support
+          el.addEventListener('touchstart', function(ev){ ev.stopPropagation(); // show tooltip on touch
+            var t = this.querySelector('.tooltip'); if(t){ t.classList.add('touch-show'); setTimeout(function(){ t.classList.remove('touch-show'); }, 3000); }
+          });
+
+          techContainer.appendChild(el);
+        });
+      }
+
+      // contact form demo
+      var form = document.getElementById('contactForm');
+      if(form){
+        form.addEventListener('submit', function(e){ e.preventDefault(); var name = (document.getElementById('nameInput') && document.getElementById('nameInput').value) || 'Pengirim'; alert('Terima kasih, ' + name + ' — pesan Anda telah terkirim (demo).'); form.reset(); });
+        var resetBtn = document.getElementById('resetBtn'); if(resetBtn) resetBtn.addEventListener('click', function(){ form.reset(); });
+      }
+
+      // download CV safe
+      var dl = document.getElementById('downloadCV'); if(dl){ dl.addEventListener('click', function(){ fetch('Cv_Muiz Maulana_Personal.pdf').then(function(r){ if(!r.ok) throw new Error('fetch failed'); return r.blob(); }).then(function(b){ var url = URL.createObjectURL(b); var a = document.createElement('a'); a.href = url; a.download = 'CV-Muiz-Maulana-Hidayat.pdf'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url); }).catch(function(){ alert('CV tidak tersedia secara langsung di demo.'); }); }); }
+
+      // active nav on scroll
+      (function(){ var navLinks = document.querySelectorAll('nav a'); var sections = []; for(var i=0;i<navLinks.length;i++){ try{ var href = navLinks[i].getAttribute('href'); if(!href||href.charAt(0)!='#') continue; var sec = document.querySelector(href); if(sec) sections.push({link:navLinks[i], section:sec}); }catch(e){} }
+        window.addEventListener('scroll', function(){ var y = window.scrollY + 140; for(var k=0;k<sections.length;k++){ var secTop = sections[k].section.offsetTop; var secBottom = secTop + sections[k].section.offsetHeight; if(secTop <= y && secBottom > y){ for(var m=0;m<sections.length;m++) sections[m].link.classList.remove('active'); sections[k].link.classList.add('active'); break; } } }); })();
+
+      // mobile menu simple
+      var mobileBtn = document.getElementById('mobileToggle'); if(mobileBtn){ mobileBtn.addEventListener('click', function(){ alert('Menu mobile: minta saya tambahkan drawer mobile jika diperlukan.'); }); }
+
+    })();
+  </script>
+</body>
+</html>
